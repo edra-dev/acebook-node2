@@ -21,7 +21,7 @@ app.set("port", port);
  **/
 
 var mongoDbUrl = process.env.MONGODB_URI || "mongodb://0.0.0.0/acebook";
-console.log(mongoDbUrl);
+console.log("this is line 24", mongoDbUrl);
 mongoose.connect(mongoDbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -98,5 +98,6 @@ function onListening() {
   var addr = server.address();
   var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
   console.log("Now listening on " + bind);
+  console.log("This is from line 101", mongoDbUrl);
   debug("Listening on " + bind);
 }
