@@ -97,7 +97,7 @@ function onError(error) {
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
-  console.log("Now listening on " + bind);
-  console.log("This is from line 101", mongoDbUrl);
+  console.log("This is from line 100", mongoDbUrl);
+  console.log("***Now listening on " + bind);
   debug("Listening on " + bind);
 }
